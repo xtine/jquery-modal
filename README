@@ -1,3 +1,23 @@
-A super simple JQuery plugin for modal windows. works with your CSS.
+Dramatic fork of the leanModal.js jQuery plugin by FinelySliced.
 
-Built for all the short dialogs, alerts, panels and such associated with an app, that you may want to handle in a modal window. Designed to handle hidden content, and doesn't apply any styles to the target element, other than for displaying and positioning.
+Initialize modal by simply calling it on a jQuery object.
+Example: $('.modal).modal();
+
+CSS:
+#curtain {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+Currently the only way to close the modal is by putting <div class="close"></div> within modal html. Set CSS styles appropriately. Option to close by clicking curtain and ESC key to come.
+
+
+Change notes: Name change to jquery-modal, cleanup of code and curtain fades and modal transitions. Top value is now dependent on modal height. Scrolling is prevented on window when modal is opened.
+
+More documentation to come in addition to more function options.
