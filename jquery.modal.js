@@ -12,7 +12,7 @@
                 closeButton: '.close'
             };
 
-            var overlay = $("<div id='lean_overlay'></div>");
+            var overlay = $('<div id="curtain"></div>');
 
             $("body").append(overlay);
 
@@ -33,7 +33,7 @@
 
             $('body, html').css('overflow', 'hidden');
 
-            $('#lean_overlay').fadeTo(400,o.overlay);
+            overlay.fadeTo(400,o.overlay);
 
             $(modal_id).css({
                 'position' : 'fixed',
@@ -48,7 +48,7 @@
             e.preventDefault();
 
             function close_modal(modal_id){
-                $("#lean_overlay").fadeOut(800);
+                overlay.fadeOut(800);
                 $(modal_id).hide(600);
                 $('body, html').css('overflow', 'auto');
             }
